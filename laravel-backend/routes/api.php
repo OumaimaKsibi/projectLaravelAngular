@@ -8,5 +8,7 @@ Route::get('/hello', function () {
     return response()->json(['message' => 'Hello from Laravel API!']);
 });
 
-Route::get('/users', [UserController::class, 'index']); // <--- ✅ nouvelle route index
+Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);
+Route::put('/users/{id}', [UserController::class, 'update']);    
+Route::delete('/users/{id}', [UserController::class, 'destroy']);
