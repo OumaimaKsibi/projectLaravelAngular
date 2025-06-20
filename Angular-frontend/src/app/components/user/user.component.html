@@ -1,0 +1,12 @@
+<h2>Liste des utilisateurs</h2>
+<ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+</ul>
+
+<br> <br>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name" placeholder="Name" />
+  <input formControlName="email" placeholder="Email" />
+  <input type="password" formControlName="password" placeholder="Password" />
+  <button type="submit">Add User</button>
+</form>
